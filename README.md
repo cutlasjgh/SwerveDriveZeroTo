@@ -23,3 +23,11 @@ to get the 2021 code to compile in late 2022:
     must also replace AnalogInput with DutyCycleEncoder
 and of course had to add vendor libs for REV, NavX, Phoenix (might not have needed Phoenix?)
 
+Driving:
+Robot has 3 modes:
+1. Field Oriented AKA Field Centric , joystick controls Robot relative to initial powerup.
+2. Robot Oriented AKA Robot Centric AKA Body Fixed, joystick controls Robot relative to Front of Robot, as if driver was sitting in Robot, I believe you hold down a joystick button to force this mode.
+3. Autonomous Command, contains a pathing in meters to follow, notice it can turn during pathing if you put in a facing command as an argument. You have to send this command mode, outside of teleop typically.
+
+
+
