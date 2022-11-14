@@ -39,7 +39,8 @@ public class RobotContainer {
     }
 
     private void configureButtonBindings() {
-        new JoystickButton(driverJoytick, 2).whenPressed(() -> swerveSubsystem.zeroHeading());
+            // zero robot subsystem headings when button pressed, dangerous in competition, might should assign for 2 buttons to be held down before this called ?
+        new JoystickButton(driverJoytick, OIConstants.kDriverZeroHeadingButtonIdx).whenPressed(() -> swerveSubsystem.zeroHeading());
     }
 
     public Command getAutonomousCommand() {

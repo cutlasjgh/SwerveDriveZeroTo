@@ -50,7 +50,7 @@ public final class Constants {
         public static final boolean kFrontRightDriveEncoderReversed = false;
         public static final boolean kBackRightDriveEncoderReversed = false;
 
-        public static final int kFrontLeftDriveAbsoluteEncoderPort = 0;
+        public static final int kFrontLeftDriveAbsoluteEncoderPort = 0; // DIO ports when using DutyCycleEncoder aka SRX Magnetic or similar
         public static final int kBackLeftDriveAbsoluteEncoderPort = 2;
         public static final int kFrontRightDriveAbsoluteEncoderPort = 1;
         public static final int kBackRightDriveAbsoluteEncoderPort = 3;
@@ -65,18 +65,18 @@ public final class Constants {
         public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = -1.816;
         public static final double kBackRightDriveAbsoluteEncoderOffsetRad = -4.811;
 
-        public static final double kPhysicalMaxSpeedMetersPerSecond = 5;
+        public static final double kPhysicalMaxSpeedMetersPerSecond = 1;  // was 5 which means about 15MPH ! lower to 1 for now.
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
 
         public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
         public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = //
                 kPhysicalMaxAngularSpeedRadiansPerSecond / 4;
-        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 3;
+        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 1; // was 3, lower it to 1 for gentle driving
         public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 3;
     }
-
+    // speeds to use when in Autonomous mode 
     public static final class AutoConstants {
-        public static final double kMaxSpeedMetersPerSecond = DriveConstants.kPhysicalMaxSpeedMetersPerSecond / 4;
+        public static final double kMaxSpeedMetersPerSecond = DriveConstants.kPhysicalMaxSpeedMetersPerSecond / 4; // slower in Automode
         public static final double kMaxAngularSpeedRadiansPerSecond = //
                 DriveConstants.kPhysicalMaxAngularSpeedRadiansPerSecond / 10;
         public static final double kMaxAccelerationMetersPerSecondSquared = 3;
@@ -91,6 +91,7 @@ public final class Constants {
                         kMaxAngularAccelerationRadiansPerSecondSquared);
     }
 
+    // JOYSTICK settings
     public static final class OIConstants {
         public static final int kDriverControllerPort = 0;
 
@@ -98,6 +99,7 @@ public final class Constants {
         public static final int kDriverXAxis = 0;
         public static final int kDriverRotAxis = 4;
         public static final int kDriverFieldOrientedButtonIdx = 1;
+        public static final int kDriverZeroHeadingButtonIdx = 2; // dangerous in competition but necessary? should it be 2 buttons held down ?
 
         public static final double kDeadband = 0.05;
     }
