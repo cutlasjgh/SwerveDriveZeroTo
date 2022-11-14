@@ -14,11 +14,12 @@ https://docs.wpilib.org/en/stable/docs/software/vscode-overview/3rd-party-librar
 
 Note I think they use PWM Analog, and we use SRX encoder so must use DIO port and DutyCycleEncoder class instead of Absolute Analog encoder.
 
-The orig code here uses CanCoder which is deprecated. It should update to CanEncoder I think, or spark max built in encoder.
+The orig code here used CanCoder which is deprecated. It should update to CanEncoder I think, or spark max RelativeEncoder.
 actually from REV : https://docs.revrobotics.com/sparkmax/software-resources/spark-max-api-information
 
 to get the 2021 code to compile in late 2022:
     CANCoder was replaced with RelativeEncoder
     normalizeWheelSpeeds was replaced with desaturateWheelSpeeds
+    must also replace AnalogInput with DutyCycleEncoder
 and of course had to add vendor libs for REV, NavX, Phoenix (might not have needed Phoenix?)
 
