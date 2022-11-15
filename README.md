@@ -2,6 +2,10 @@
 This Code is based on 2021 code from team 6814's very good zero to Autonomous Swerve drive example.
 Updates here done by team 4533 persons.
 
+##CURRENTLY THIS CODE IS AWAITING TEST and so It is NOT proven yet, use at your own risk.
+It does compile as of Nov 2022 and is believed to have correct encoder function calls etc. 
+Once Proven, this notice will be replaced with status.
+
 0 to autonomous made the video up top, here is their code https://github.com/SeanSun6814/FRC0ToAutonomous
 see also https://github.com/Ellipse6814
 please watch the 0 to autonomous Video it has great explantions of concepts in swerve code https://www.youtube.com/watch?v=0Xi9yb1IMyA
