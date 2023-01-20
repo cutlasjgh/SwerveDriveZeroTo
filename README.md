@@ -15,7 +15,8 @@ If you get errors compiling..
 You may need to update vendor libraries, look here for newest json files
 https://docs.wpilib.org/en/stable/docs/software/vscode-overview/3rd-party-libraries.html
 
-
+Note this code was built using WPIlib 2022 code, and the 2023 version of WPIlib changed many things that impact this code.
+Including Rotate2D which now needs radians instead of degrees (code uses degress I believe) 
 
 Note I think they use PWM Analog, and we use SRX encoder so must use DIO port and DutyCycleEncoder class instead of Absolute Analog encoder.
 
