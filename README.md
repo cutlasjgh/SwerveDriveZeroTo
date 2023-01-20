@@ -20,7 +20,7 @@ Including Rotate2D which now needs radians instead of degrees (code uses degress
 
 Note I think they use PWM Analog, and we use SRX encoder so must use DIO port and DutyCycleEncoder class instead of Absolute Analog encoder.
 
-The orig code here used REV CANCoder which is deprecated. It should update to CanEncoder I think, or spark max RelativeEncoder.
+We changed this code in swervedrivemodule to use DutyCycleEncoder which is the SRX magnetic encoder. Cancoders could be made to work fairly easily.
 actually from REV : https://docs.revrobotics.com/sparkmax/software-resources/spark-max-api-information
 
 to get the 2021 code to compile in late 2022:
